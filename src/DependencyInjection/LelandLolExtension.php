@@ -17,12 +17,13 @@ final class LelandLolExtension extends Extension
 {
     public function load(array $configs, ContainerBuilder $container): void
     {
-        $processor = new Processor();
         $configuration = new Configuration();
-        $config = $processor->processConfiguration($configuration, $configs);
-        $container->setParameter('leland_lol.tag_class', $config['tag_class']);
-        $container->setParameter('leland_lol.purge', $config['purge']);
-        $container->getDefinition('leland_lol');
+        $config = $this->processConfiguration($configuration, $configs);
+        $definition = $container->getDefinition('leland_lol');
+        $definition->setArgument(0,$config['tag_class']);
+        $definition->setArgument(1,$config['purge']);
+//        $container->setParameter('leland_lol.tag_class', $config['tag_class']);
+//        $container->setParameter('leland_lol.purge', $config['purge']);
 
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../../config'));
         $loader->load('services.xml');
