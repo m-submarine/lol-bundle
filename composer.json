@@ -7,7 +7,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Lelan\\LolBundle\\": "src"
+            "Leland\\LolBundle\\": "src"
         }
     },
     "homepage": "https://github.com/m-submarine/lol-bundle.git",
@@ -40,7 +40,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Lelan\\LolBundle\\Tests\\": "tests"
+            "Leland\\LolBundle\\Tests\\": "tests"
         }
     }
 }
