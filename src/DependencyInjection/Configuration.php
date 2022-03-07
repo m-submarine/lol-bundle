@@ -13,7 +13,8 @@ class Configuration implements ConfigurationInterface
         $rootNode = $treeBuilder->getRootNode();
         $rootNode
             ->children()
-                ->scalarNode('tag_class')->isRequired()
+                ->scalarNode('tag_class')
+                    ->isRequired()
                 ->end()
                 ->booleanNode('purge')
                     ->defaultFalse()
