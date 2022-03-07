@@ -1,6 +1,6 @@
 <?php
 
-namespace Leland\TagBundle;
+namespace Leland\LolBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
