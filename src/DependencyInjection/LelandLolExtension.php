@@ -21,6 +21,6 @@ final class LelandLolExtension extends Extension
         $container->setParameter('leland_lol.tag_class', $config['tag_class'] ?? 'App\Entity\Tag');
         $container->setParameter('leland_lol.purge', $config['purge']);
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../../config'));
-        $loader->load('services.yml');
+        $loader->load('services.xml');
     }
 }
