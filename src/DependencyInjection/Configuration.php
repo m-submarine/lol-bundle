@@ -14,7 +14,6 @@ class Configuration implements ConfigurationInterface
         $rootNode
             ->children()
                 ->scalarNode('tag_class')
-                    ->isRequired()
                 ->end()
                 ->booleanNode('purge')
                     ->defaultFalse()
