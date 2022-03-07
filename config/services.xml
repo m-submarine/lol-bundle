@@ -6,7 +6,7 @@
 >
 
     <services>
-        <service id="leland_lol" class="Leland\LolBundle\Listener\LolSubscriber" public="true" lazy="true">
+        <service id="leland_lol" class="Leland\LolBundle\Listener\LolSubscriber" public="true">
             <argument>%leland_lol.tag_class%</argument>
             <argument>%leland_lol.purge%</argument>
             <!-- priority must be higher than other subscribers, e.g. the StofDoctrineExtensionsBundle ones -->
