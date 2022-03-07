@@ -17,6 +17,9 @@ final class LelandLolExtension extends Extension
 {
     public function load(array $configs, ContainerBuilder $container): void
     {
+        $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../../config'));
+        $loader->load('services.xml');
+
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
         $definition = $container->getDefinition('leland_lol');
@@ -24,8 +27,5 @@ final class LelandLolExtension extends Extension
         $definition->setArgument(1,$config['purge']);
 //        $container->setParameter('leland_lol.tag_class', $config['tag_class']);
 //        $container->setParameter('leland_lol.purge', $config['purge']);
-
-        $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../../config'));
-        $loader->load('services.xml');
     }
 }
