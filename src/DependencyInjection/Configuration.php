@@ -13,7 +13,7 @@ class Configuration implements ConfigurationInterface
         $rootNode = $treeBuilder->getRootNode();
         $rootNode
             ->children()
-                ->scalarNode('tag_class')
+                ->scalarNode('tag_class')->defaultValue('App\Entity\Post')
                 ->end()
                 ->booleanNode('purge')
                     ->defaultFalse()
